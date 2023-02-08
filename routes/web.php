@@ -22,14 +22,39 @@ Route::get('/dashboard/siswa', function () {
     return view('pages.admin.siswa.index');
 });
 
-Route::get('/dashboard/pembayaran', function () {
-    return view('pages.admin.pembayaran.index');
-});
-
 Route::get('/dashboard/kelas', function () {
     return view('pages.admin.kelas.index');
 });
 
+Route::get('/dashboard/admin', function () {
+    return view('pages.admin.admin.index');
+});
+
+Route::get('/dashboard/user', function () {
+    return view('pages.admin.user.index');
+});
+
+Route::get('/dashboard/petugas', function () {
+    return view('pages.admin.petugas.index');
+});
+
+Route::get('/dashboard/spp', function () {
+    return view('pages.admin.spp.index');
+});
+
+// Pembayaran
+Route::get('/dashboard/pembayaran', function () {
+    return view('pages.admin.pembayaran.index');
+});
+Route::get('/dashboard/pembayaran/bayar', function () {
+    return view('pages.admin.pembayaran.bayar');
+});
+Route::get('/dashboard/pembayaran/status', function () {
+    return view('pages.admin.pembayaran.status-pembayaran');
+});
+Route::get('/dashboard/pembayaran/detail', function () {
+    return view('pages.admin.pembayaran.detail-status');
+});
 
 Route::middleware([
     'auth:sanctum',
